@@ -1,0 +1,650 @@
+/* assets/style.css */
+:root {
+  --bg-page: #0e1e3e;
+  --bg-panel: #162a4b;
+  --text-light: #f0f3f7;
+  --accent: #08aeea;
+}
+
+body, .dbc {
+  background-color: var(--bg-page) !important;
+  color: var(--text-light);
+}
+
+h1, h2, label {
+  color: var(--text-light) !important;
+}
+
+.card {
+  background-color: var(--bg-panel) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.plotly-graph-div {
+  background-color: transparent !important;
+}
+
+/* ===== Тёмный стиль для dcc.Dropdown (react-select) ===== */
+.Select__control,
+.css-1hwfws3 {  /* запасной селектор, меняется по версии dash */
+  background-color: #162a4b !important;
+  border: 1px solid #0e1e3e !important;
+  color: var(--text-light) !important;
+}
+
+.Select__control:hover,
+.css-1hwfws3:hover {
+  border-color: var(--accent) !important;
+}
+
+.Select__menu,
+.css-26l3qy-menu {
+  background-color: #162a4b !important;
+  color: var(--text-light) !important;
+}
+
+.Select__option,
+.css-yt9ioa-option {
+  background-color: #162a4b;
+  color: var(--text-light);
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  border-bottom: 1px solid #1a1a1a;
+  white-space: normal !important;
+}
+
+.Select__option--is-focused,
+.css-yt9ioa-option--is-focused {
+  background-color: #0e1e3e;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  border-bottom: 1px solid #1a1a1a;
+  white-space: normal !important;
+}
+
+.Select__option--is-selected,
+.css-yt9ioa-option--is-selected {
+  background-color: var(--accent);
+  color: #162a4b;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  border-bottom: 1px solid #1a1a1a;
+  white-space: normal !important;
+}
+
+/* ===== Тёмный стиль для DatePickerRange ===== */
+.DateInput,
+.DateInput_input,
+.css-1t5oug3 {  /* запасной селектор */
+  background-color: #162a4b !important;
+  color: var(--text-light) !important;
+  border: 1px solid #0e1e3e !important;
+}
+
+.DateInput_input__focused,
+.css-1nxgmv5 {
+  border-color: var(--accent) !important;
+}
+
+.SingleDatePickerInput_calendarIcon,
+.SingleDatePickerInput_clearDate,
+.DateRangePickerInput_calendarIcon,
+.DateRangePickerInput_clearDates {
+  color: var(--text-light) !important;
+}
+
+.CalendarMonthGrid,
+.DayPickerNavigation_button {
+  background-color: #162a4b !important;
+}
+
+.CalendarDay__selected,
+.CalendarDay__selected_span,
+.CalendarDay__hovered_span {
+  background: var(--accent) !important;
+  color: #162a4b !important;
+}
+
+.CalendarDay__today {
+  border: 1px solid var(--accent) !important;
+}
+
+/* ========= DatePickerRange: инпуты дат ========= */
+.DateInput_input,
+.DateInput_input__focused,
+.css-1t5oug3,                 /* Dash 2.x */
+.css-1a5f5efe,                /* Dash 2.x и ниже */
+input.DateInput_input {
+  background-color: #162a4b !important;
+  color: var(--text-light) !important;
+  border: 1px solid #0e1e3e !important;
+}
+
+/* placeholder внутри инпута даты */
+.DateInput_input::placeholder,
+.css-18kph3l-placeholder {
+  color: rgba(240,243,247,0.6) !important;
+}
+
+/* ===== dcc.Dropdown (react-select) ===== */
+.css-1hwfws3,                 /* control */
+.Select__control {
+  background-color: #162a4b !important;
+  border: 1px solid #0e1e3e !important;
+}
+
+.css-1hwfws3 input,           /* ввод / singleValue */
+.css-1uccc91-singleValue {
+  color: var(--text-light) !important;
+}
+
+.css-1wa3eu0-placeholder,     /* placeholder */
+.css-1okebmr-indicatorSeparator {
+  color: rgba(240,243,247,0.6) !important;
+  background-color: #162a4b !important;
+}
+
+.css-26l3qy-menu,             /* выпадающее меню */
+.Select__menu {
+  background-color: #162a4b !important;
+}
+
+.css-yt9ioa-option,           /* опции */
+.Select__option {
+  background-color: #162a4b !important;
+  color: var(--text-light) !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  border-bottom: 1px solid #1a1a1a;
+  white-space: normal !important;
+}
+
+.css-yt9ioa-option--is-focused,
+.Select__option--is-focused {
+  background-color: #0e1e3e !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  border-bottom: 1px solid #1a1a1a;
+  white-space: normal !important;
+}
+
+.css-yt9ioa-option--is-selected,
+.Select__option--is-selected {
+  background-color: var(--accent) !important;
+  color: #162a4b !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  border-bottom: 1px solid #1a1a1a;
+  white-space: normal !important;
+}
+
+/* ===== убираем белые разделители ===== */
+.css-1okebmr-indicatorSeparator,
+.css-1g6gooi-indicatorSeparator {
+  background-color: #0e1e3e !important;
+}
+
+/* ============================
+   Общие селекторы для React-Select
+   ============================ */
+
+/* Контейнер, где отображается выбранное значение */
+[class*="control"],
+[class*="Control"] {
+  background-color: #162a4b !important;
+  border: 1px solid #0e1e3e !important;
+}
+
+/* Область с самим значением (singleValue) и placeholder */
+[class*="singleValue"],
+[class*="Placeholder"] {
+  color: var(--text-light) !important;
+  opacity: 1 !important;  /* иногда placeholder бледнее */
+}
+
+/* Контейнер со списком опций */
+[class*="menu"],
+[class*="Menu"] {
+  background-color: #162a4b !important;
+  color: var(--text-light) !important;
+}
+
+/* Каждая отдельная опция */
+[class*="option"],
+[class*="Option"] {
+  background-color: #162a4b !important;
+  color: var(--text-light) !important;
+}
+
+/* Наведение и выбранная опция */
+[class*="option--is-focused"],
+[class*="Option--is-focused"],
+[class*="option--is-selected"],
+[class*="Option--is-selected"] {
+  background-color: var(--accent) !important;
+  color: #162a4b !important;
+}
+
+/* Индикаторы (стрелочка, крестик) */
+[class*="IndicatorsContainer"],
+[class*="indicatorSeparator"],
+[class*="IndicatorSeparator"] {
+  color: var(--text-light) !important;
+  background-color: #162a4b !important;
+}
+
+/* ============= DatePickerRange ============= */
+
+/* Поля ввода дат */
+.DayPickerInput input,
+[class*="DateInput_input"] {
+  background-color: #162a4b !important;
+  color: var(--text-light) !important;
+  border: 1px solid #0e1e3e !important;
+}
+
+/* Плейсхолдер даты */
+.DayPickerInput input::placeholder {
+  color: rgba(240,243,247,0.6) !important;
+}
+
+/* Вид календаря */
+.CalendarMonth,
+.CalendarMonthGrid {
+  background-color: #162a4b !important;
+}
+
+.CalendarDay__default {
+  color: var(--text-light) !important;
+}
+
+.CalendarDay__selected,
+.CalendarDay__selected_span,
+.CalendarDay__hovered_span {
+  background-color: var(--accent) !important;
+  color: #162a4b !important;
+}
+
+/* ============== Вид выбранного значения (singleValue) ============== */
+[class*="singleValue"],
+[class*="SingleValue"] {
+  color: var(--text-light) !important;
+  opacity: 1 !important;
+}
+
+/* ============== Для multiValue (если вдруг) ============== */
+[class*="multiValue__label"],
+[class*="MultiValue__label"] {
+  color: var(--text-light) !important;
+}
+
+/* ============== Контейнер значений ============== */
+[class*="valueContainer"],
+[class*="ValueContainer"] {ё
+  background-color: #162a4b !important;
+  color: var(--text-light) !important;
+}
+
+/* Только для дропдаунов с классом dark-dropdown */
+.dark-dropdown .css-1uccc91-singleValue,
+.dark-dropdown .css-1uccc91-singleValue * {
+  color: var(--text-light) !important;
+  opacity: 1 !important;
+}
+
+.dark-dropdown .css-1wa3eu0-placeholder {
+  color: rgba(240,243,247,0.6) !important;
+}
+
+.dark-dropdown .css-1uccc91-singleValue {
+  background-color: #162a4b !important;
+}
+
+.dark-dropdown .css-1hwfws3 {
+  background-color: #162a4b !important;
+  border-color: #0e1e3e !important;
+}
+
+.dark-dropdown .css-26l3qy-menu {
+  background-color: #162a4b !important;
+  color: var(--text-light) !important;
+}
+
+.dark-dropdown .css-yt9ioa-option {
+  background-color: #162a4b !important;
+  color: var(--text-light) !important;
+}
+
+.dark-dropdown .css-yt9ioa-option--is-focused {
+  background-color: #0e1e3e !important;
+}
+
+.dark-dropdown .css-yt9ioa-option--is-selected {
+  background-color: var(--accent) !important;
+  color: #162a4b !important;
+}
+
+.dark-dropdown .css-1okebmr-indicatorSeparator {
+  background-color: #0e1e3e !important;
+}
+
+.dark-dropdown .css-1g6gooi-indicatorSeparator {
+  display: none !important;
+}
+
+/* Переопределение цвета текста выбранного значения */
+.dark-dropdown .has-value.Select--single > .Select-control .Select-value .Select-value-label,
+.dark-dropdown .has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+    color: var(--text-light) !important; /* Используем основной цвет текста */
+    background-color: rgba(8, 174, 234, 0.1) !important; /* Лёгкая синяя подложка */
+    border-radius: 4px;
+    padding: 2px 8px;
+}
+
+/* Для акцентного состояния (фокус/ховер) */
+.dark-dropdown .has-value.Select--single > .Select-control .Select-value .Select-value-label:hover {
+    color: var(--accent) !important;
+    border: 1px solid var(--accent);
+}
+
+
+.has-value.Select--single>.Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-label {
+    color: #318eff;
+}
+
+.DateRangePickerInput {
+    background-color: #162a4b;
+    display: inline-block;
+}
+
+.DateRangePickerInput_arrow_svg {
+    vertical-align: middle;
+    fill: #fff;
+    height: 24px;
+    width: 24px;
+}
+
+/* Добавьте это в ваш CSS-файл */
+#show-comments {
+    background: linear-gradient(135deg, #08aeea 0%, #0278ae 100%);
+    color: #f0f3f7 !important;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(8, 174, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+#show-comments:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(8, 174, 234, 0.4);
+    background: linear-gradient(135deg, #08aeea 30%, #015f8c 100%);
+}
+
+#show-comments:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(8, 174, 234, 0.3);
+}
+
+#show-comments::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: all 0.5s ease;
+}
+
+#show-comments:hover::before {
+    left: 100%;
+}
+
+#wordcloud-image {
+    background-color: #0e1e3e; /* Цвет фона панели */
+    border: 2px solid #08aeea; /* Акцентная рамка */
+    border-radius: 12px; /* Скругление углов */
+    padding: 15px; /* Отступ внутри рамки */
+    box-shadow: 0 8px 25px rgba(8, 174, 234, 0.15); /* Синяя тень */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Плавные переходы */
+    cursor: pointer; /* Изменение курсора */
+    filter: grayscale(20%); /* Легкий фильтр */
+    margin: 1.5rem 0; /* Отступы */
+}
+
+#wordcloud-image:hover {
+    transform: translateY(-5px); /* Эффект подъема */
+    box-shadow: 0 12px 35px rgba(8, 174, 234, 0.3); /* Усиление тени */
+    filter: grayscale(0%) brightness(105%); /* Убрать фильтр */
+    border-color: #0ad4fa; /* Светящаяся рамка */
+    animation: pulse 2s infinite; /* Пульсация */
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(10, 212, 250, 0.4); }
+    70% { box-shadow: 0 0 0 12px rgba(10, 212, 250, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(10, 212, 250, 0); }
+}
+
+/* Для адаптивности */
+@media (max-width: 768px) {
+    #wordcloud-image {
+        padding: 10px;
+        border-width: 1px;
+        margin: 1rem 0;
+    }
+}
+
+/* Анимация загрузки */
+#wordcloud-image:not([src]) {
+    background: linear-gradient(90deg, #0e1e3e 25%, #162a4b 50%, #0e1e3e 75%);
+    background-size: 400% 400%;
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+#comments-output {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.comment-card {
+    background: #162a4b;
+    border-left: 4px solid #08aeea;
+    border-radius: 6px;
+    padding: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(8, 174, 234, 0.1);
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.comment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(8, 174, 234, 0.1),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.comment-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(8, 174, 234, 0.2);
+}
+
+.comment-card:hover::before {
+    left: 100%;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Для длинных текстов */
+.comment-card {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+/* Стиль скроллбара */
+.comment-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.comment-card::-webkit-scrollbar-track {
+    background: #0e1e3e;
+}
+
+.comment-card::-webkit-scrollbar-thumb {
+    background: #08aeea;
+    border-radius: 3px;
+}
+
+/* Общий контейнер для кнопки и изображения */
+#wordcloud-image, #show-comments {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Дополнительные стили для адаптивности */
+#show-comments {
+    width: fit-content; /* Ширина по содержимому */
+    padding: 12px 40px; /* Увеличим горизонтальные отступы */
+}
+
+#wordcloud-image {
+    max-width: 80%; /* Оставим пространство по бокам */
+    display: block; /* Важно для центрирования */
+}
+
+.CalendarMonth_caption {
+    color: #f0f3f7;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 22px;
+    padding-bottom: 37px;
+    caption-side: initial;
+}
+
+/* Стили для заблокированных дат */
+.CalendarDay__blocked_out_of_range {
+  background: #1a2b4d !important;
+  color: #4a5568 !important;
+  text-decoration: line-through !important;
+  cursor: not-allowed !important;
+  border: 1px solid #0e1a2d !important;
+  opacity: 0.7;
+}
+
+/* Ховер для доступных дат */
+.CalendarDay:not(.CalendarDay__blocked_out_of_range):hover {
+  background: #08aeea !important;
+  color: #484848 !important;
+}
+
+/* Текущая дата */
+.CalendarDay__today {
+  border: 2px solid #08aeea !important;
+  font-weight: bold;
+  color: #f0f3f7 !important;
+}
+
+/* Выбранный диапазон */
+.CalendarDay__selected_span {
+  background: rgba(8, 174, 234, 0.3) !important;
+  border-color: #08aeea !important;
+}
+
+.CalendarDay__default {
+    color: #000 !important;
+}
+
+/* Убираем белую рамку у контейнера календаря */
+.DateRangePicker {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+/* Убираем границы у внутренних элементов */
+.DateRangePickerInput {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+/* Исправляем фон заголовка */
+.CalendarMonth_caption {
+  background-color: #162a4b !important;
+  color: #f0f3f7 !important;
+}
+
+/* Убираем белую обводку у дней */
+.CalendarDay {
+  border: 1px solid #0e1e3e !important;
+}
+
+/* Исправляем фон всего попапа */
+.DateRangePicker_picker {
+  background-color: #162a4b !important;
+  border: 1px solid #08aeea !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(8, 174, 234, 0.2) !important;
+}
+
+.DayPicker__horizontal {
+    background: #162a4b;
+}
+
+/* assets/dropdown.css */
+
+.Select-option {
+    padding: 12px 16px !important;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    white-space: normal !important;
+    background-color: #1e2b40; /* чтобы отличались */
+    color: #f0f3f7;
+    font-size: 16px;
+    line-height: 1.4;
+    transition: background-color 0.2s ease;
+}
+
+.Select-option:hover {
+    background-color: #2e3c55 !important;
+}
