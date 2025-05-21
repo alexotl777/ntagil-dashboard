@@ -94,7 +94,7 @@ class Clustering:
 
         response = requests.post(self.url, json=data, headers=headers)
         try:
-            logger.info(f"Topic {number}: {response.json()["choices"][0]["message"]["content"]}")
+            # logger.info(f"Topic {number}: {response.json()["choices"][0]["message"]["content"]}")
             return response.json()["choices"][0]["message"]["content"]
         except:
             logger.error(f"Incorrect resp: {response.json()}")
@@ -115,7 +115,7 @@ class Clustering:
 
         response = requests.post(url, json=payload, headers=headers)
         try:
-            logger.info(f"Topic {number}: {response.json()["choices"][0]["text"]}")
+            # logger.info(f"Topic {number}: {response.json()["choices"][0]["text"]}")
             return response.json()["choices"][0]["text"]
         except:
             logger.error(f"Incorrect resp: {response.json()}")
@@ -139,7 +139,7 @@ class Clustering:
 
         response = requests.post(self.url, json=data, headers=headers)
         try:
-            logger.info(f"Topic {number}: {response.json()["choices"][0]["message"]["content"]}")
+            # logger.info(f"Topic {number}: {response.json()["choices"][0]["message"]["content"]}")
             return response.json()["choices"][0]["message"]["content"]
         except:
             logger.error(f"Incorrect resp: {response.json()}")
