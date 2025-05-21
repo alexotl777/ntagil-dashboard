@@ -53,3 +53,14 @@ if __name__ == "__main__":
     logger.info("Start App...")
     app.run()
     # full_pipeline()
+else:
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(
+        full_pipeline,
+        'interval',
+        hours=12,
+        next_run_time=datetime.now()
+    )
+    scheduler.start()
+    logger.info("Start App...")
+    server = app.server
